@@ -29,3 +29,39 @@ header li{
     font-weight: bold;
     font-size: 15px;
 }
+
+.image_icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 50px;
+}
+
+.request{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-bottom: 12px;
+}
+
+.request_online button{
+    font-weight: bold;
+    padding: 11px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border-width: 10px;
+    border: solid;
+    border-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    transition: 1s;
+
+
+ } 
+.request_online button:hover{
+    transition: 1s;
+    background-color: #dab225;
+}

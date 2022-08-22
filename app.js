@@ -18,7 +18,7 @@ const handlebars = require("express-handlebars")
 
 //Rotas
     app.get("/", (req, res)=>{
-        res.render("index", {style: "style.css"})
+        res.render("index", {style: "style.css", script: "index.js"})
     })
 
 const PORT = 65
