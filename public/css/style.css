@@ -3,3 +3,38 @@
     padding: 0px;
 }
 
+body{
+    background-color: #F1EDEA;
+}
+
+.request2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-bottom: 12px;
+}
+
+.request_online2 button{
+    font-weight: bold;
+    padding: 11px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border-width: 10px;
+    border: solid;
+    border-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    transition: 1s;
+
+
+ } 
+.request_online2 button:hover{
+    transition: 1s;
+    background-color: rgb(107, 0, 5);
+}
+
+.indexImages{
+    width: 100%;
+}

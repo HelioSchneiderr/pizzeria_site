@@ -1,0 +1,51 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+footer{
+    background-color: rgb(107, 0, 5);
+    display: flex;
+    margin: auto;
+    
+}
+
+.footerList{
+    margin: auto;
+}
+
+footer ul{
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 400px;
+}
+
+footer li{
+    color: white;
+    list-style-type: none;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.footerIcons{
+    position: absolute;
+    left: 430px;
+    margin-top: 100px;
+}
+
+.footerIcons2{
+    position: absolute;
+    left: 500px;
+    margin-top: 150px;
+}
+
+.footerCopy{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 400px;
+    margin-top: 350px;
+}
