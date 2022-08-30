@@ -72,7 +72,27 @@ header li{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         height: 300px;
     }
 
+    header ul{
+        margin-left: 0px;
+    }
+
+    .request{
+        margin-left: 0px;
+    }
+
+    .image_icons{
+        padding-left: 0px;
+    }
+
+
+}
+
+@media  screen and (max-width:546px){
+    header li{
+        font-size: 12px;
+    }
 }

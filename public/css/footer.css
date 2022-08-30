@@ -35,3 +35,16 @@ footer li{
     color: white;
     font-weight: bold;
 }
+
+@media  screen and (max-width:764px){
+    footer li{
+        font-size: 12px;
+    }
+}
+
+@media  screen and (max-width:498px){
+    .footerIcons{
+        width: 237px;
+    }
+}
+
