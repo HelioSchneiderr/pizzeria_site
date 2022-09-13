@@ -3,7 +3,9 @@
     padding: 0px;
 }
 
-
+body{
+    background-image: url("http://joselito.com.br/wp-content/uploads/pizza-wallpaper-olives-mushrooms-cheese-tomatoes-parsley-dish-food.jpg");
+}
 
 form{
     margin: 50px;

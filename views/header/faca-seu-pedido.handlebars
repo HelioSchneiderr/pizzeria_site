@@ -1,30 +1,31 @@
 <link rel="stylesheet" href="/css/faca-seu-pedido.css">
 
-<form action="">
+
+<form action="/header/novo-pedido" method="POST">
     <div class="container">
         <h1>FAÇA SEU PEDIDO</h1>
         <div class="form-control">
             <label for="">Tamanho: </label>
-            <input type="text">
+            <input name="tamanho" id="tamanho" placeholder="Grande, Médio ou Pequena" type="text">
         </div>
         <div class="form-control">
             <label for="">Sabor: </label>
-            <input type="text">
+            <input name="sabor" id="sabor" type="text">
         </div>
         <div class="form-control">
             <label for="">Bebidas: </label>
-            <input type="text">
+            <input name="bebidas" id="bebidas" type="text">
         </div>
         <div class="form-control">
             <label for="">Endereço: </label>
-            <input type="text">
+            <input name="endereco" id="endereco" type="text">
         </div>
         <div class="form-control">
             <label for="">Telefone: </label>
-            <input type="text">
+            <input name="telefone" id="telefone" type="text">
         </div>
         <div>
-            <a href="#"><button class="btn-faca-seu-pedido">Fazer Pedido</button></a>
+            <a href="#"><button type="submit" class="btn-faca-seu-pedido">Fazer Pedido</button></a>
         </div>
     </div>
 

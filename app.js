@@ -1,11 +1,18 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser")
 const handlebars = require("express-handlebars")
 const header = require("./routes/header")
+const mongoose = require("mongoose")
 
 
 
 //Configs
+
+    //Body Parser
+        app.use(express.urlencoded({extended: true}));
+        app.use(express.json());
+
 
     //Handlebars
          const handle = handlebars.create({
@@ -15,6 +22,14 @@ const header = require("./routes/header")
             app.engine('handlebars', handle.engine);
             app.set('view engine', 'handlebars');
             app.use(express.static(__dirname + "/public"))
+
+    //Mongoose
+    mongoose.Promise = global.Promise;
+    mongoose.connect("mongodb://localhost/pizza").then(() =>{
+        console.log("Conectado ao mongo")
+    }).catch((err) => {
+        console.log("Erro ao se conectar: " +err)
+    })
 
 
 //Rotas
