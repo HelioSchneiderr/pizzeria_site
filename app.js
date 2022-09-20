@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser")
 const handlebars = require("express-handlebars")
 const header = require("./routes/header")
+const admin = require("./routes/admin")
 const mongoose = require("mongoose")
 
 
@@ -39,10 +40,10 @@ const mongoose = require("mongoose")
 
     
 
-
+    app.use("/admin", admin)
     app.use("/header", header)
 
-const PORT = 65
+const PORT = 2800
 app.listen(PORT, ()=>{
     console.log("Server Open")
 })

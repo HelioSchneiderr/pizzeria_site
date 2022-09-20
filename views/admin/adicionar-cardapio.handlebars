@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/faca-seu-pedido.css">
+
+
+<form action="/admin/nova-pizza" method="POST">
+    <div class="container">
+        <h1>Adicionar Pizza</h1>
+        
+        <div class="form-control">
+            <label for="">Tipo: </label>
+            <select name="tipo" id="">
+                <option value="salgada">Salgada</option>
+                <option value="doce">Doce</option>
+            </select>
+        </div>
+        
+        <div class="form-control">
+            <label for="">Sabor: </label>
+            <input name="sabor" id="sabor" type="text">
+        </div>
+        
+        <div class="form-control">
+            <label for="">Descrição: </label>
+            <input name="descricao" id="descricao" type="text">
+        </div>
+        <div class="form-control">
+            <label for="">Preço: </label>
+            <input name="preco" id="preco" value="R$" type="text">
+        </div>
+        <div>
+            <a href="#"><button type="submit" class="btn-faca-seu-pedido">Adcionar ao Cardápio</button></a>
+        </div>
+    </div>
+
+
+
+</form>

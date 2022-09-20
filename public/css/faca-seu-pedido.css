@@ -41,7 +41,7 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.form-control input{
+.form-control input, select {
     border: 1px solid #FFC808;
     display: block;
     border-radius: 10px;
@@ -49,6 +49,7 @@ h1{
     width: 90%;
     padding: 10px;
 }
+
 
 .btn-faca-seu-pedido {
     background-color: #6B0005;
