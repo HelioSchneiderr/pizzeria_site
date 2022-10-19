@@ -5,10 +5,22 @@ const handlebars = require("express-handlebars")
 const header = require("./routes/header")
 const admin = require("./routes/admin")
 const mongoose = require("mongoose")
+const session = require("express-session")
+const flash = require("connect-flash")
+const path = require("path")
 
 
 
 //Configs
+
+
+    //Session
+    app.use(session({
+        secret: "27819205",
+        resave: true,
+        saveUninitialized: true
+    }))
+    app.use(flash())
 
     //Body Parser
         app.use(express.urlencoded({extended: true}));
@@ -26,10 +38,18 @@ const mongoose = require("mongoose")
 
     //Mongoose
     mongoose.Promise = global.Promise;
-    mongoose.connect("mongodb://localhost/pizza").then(() =>{
+    mongoose.connect("mongodb://127.0.0.1:27017/pizzaria").then(() =>{
         console.log("Conectado ao mongo")
     }).catch((err) => {
         console.log("Erro ao se conectar: " +err)
+    })
+
+    //Public
+    app.use(express.static(path.join(__dirname,"public")))
+    app.use((req, res, next) =>{
+        res.locals.success_msg = req.flash("success_msg")
+        res.locals.error_msg = req.flash("error_msg")
+        next();
     })
 
 
@@ -43,7 +63,7 @@ const mongoose = require("mongoose")
     app.use("/admin", admin)
     app.use("/header", header)
 
-const PORT = 2800
+const PORT = 9676
 app.listen(PORT, ()=>{
     console.log("Server Open")
 })

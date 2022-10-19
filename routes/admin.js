@@ -10,18 +10,39 @@ router.get("/adicionar-cardapio", (req,res)=>{
 
 router.post("/nova-pizza", (req,res)=>{
     
-    const novaPizza = {
-        tipo: req.body.tamanho,
-        sabor: req.body.sabor,
-        descricao: req.body.descricao,
-        preco: req.body.preco
+    let errors = [];
+
+    if(!req.body.sabor){
+        errors.push({text: "Sabor inválido, o campo está vazio"})
+    };
+
+    if(req.body.descricao.length < 100){
+        errors.push({text: "Descrição inválida, o campo está vazio ou possui poucas palavras"})
+    };
+
+    if(req.body.preco.length <= 2){
+        errors.push({text: "Preço inválido"})
+    };
+
+    if(errors.length > 0){
+        res.render("admin/adicionar-cardapio", {errors:errors})
     }
 
-    new Pizza(novaPizza).save().then(()=>{
-        console.log("Pizza Adicionada")
-    }).catch((err)=>{
-        console.log("Deu um erro" + err)
-    })
+    else{
+
+        const novaPizza = {
+            tipo: req.body.tipo,
+            sabor: req.body.sabor,
+            descricao: req.body.descricao,
+            preco: req.body.preco
+        }
+
+        new Pizza(novaPizza).save().then(()=>{
+            console.log("Pizza Adicionada")
+        }).catch((err)=>{
+            console.log("Deu um erro" + err)
+        })
+    }
 
 })
 
