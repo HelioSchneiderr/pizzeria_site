@@ -38,9 +38,11 @@ router.post("/nova-pizza", (req,res)=>{
         }
 
         new Pizza(novaPizza).save().then(()=>{
-            console.log("Pizza Adicionada")
+            req.flash("success_msg", "Produto Adicionado com successo")
+            res.redirect("../header/cardapio")
         }).catch((err)=>{
-            console.log("Deu um erro" + err)
+            req.flash("error_msg", `O produto não foi adicionado devido ao erro: ${err}`)
+            res.redirect("../header/cardapio")
         })
     }
 

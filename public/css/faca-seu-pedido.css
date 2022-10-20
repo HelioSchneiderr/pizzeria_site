@@ -79,7 +79,7 @@ textarea{
     border-radius: 10px;
 }
 
-.alert_danger{
+.alert_error{
     width: 50%;
     margin: 10px auto;
     padding: 12px 16px;

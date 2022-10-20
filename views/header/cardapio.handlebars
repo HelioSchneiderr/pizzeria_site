@@ -1,5 +1,14 @@
 <link rel="stylesheet" href="/css/cardapio.css">
 
+{{#each pizza}}
+    <div class="pizza-cardapio">
+    <h1>{{sabor}}</h1>
+    <p>{{descricao}}</p>
+</div>
+{{else}}
+
+{{/each}}
+
 <nav>
     <div class="cardapio-btn">
         <button>Pizzas Salgadas</button>
