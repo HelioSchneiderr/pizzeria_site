@@ -1,3 +1,8 @@
+body{
+    background-image: url("https://i.pinimg.com/originals/90/43/a7/9043a730ef9d90e2b2e6c92265939457.jpg");
+}
+
+
 nav{
     display: flex;
     align-items: center;
@@ -23,11 +28,40 @@ nav{
     color: white;
 }
 
+
 .pizza-cardapio{
     background-color: #E19F0C;
     width: 80%;
-    padding: 4px 14px;
+    padding: 10px 14px;
     border-radius: 20px;
     margin-left: 65px;
     margin-bottom: 50px;
 }
+
+.pizza-cardapio h3{
+    color: #6B0005;
+    width: 500px;
+}
+
+.prices p{
+    display: inline;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.alert_success{
+    width: 50%;
+    margin: 10px auto;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 16px;
+    background-color: rgb(215, 248, 217);
+    border-color: rgb(49, 253, 22);
+    color: rgb(28, 114, 50);
+}
+
+

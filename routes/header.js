@@ -14,15 +14,18 @@ router.get("/faca-seu-pedido", (req, res)=>{
 })
 
 router.get("/cardapio", (req, res)=>{
-    Pizza.findAll().lean.then((pizza)=>{
+    Pizza.find().lean().then((pizza)=>{
         res.render("header/cardapio", {pizza: pizza})
     }).catch((err)=>{
         res.flash("error_message", "Houve um erro ao listar os produtos")
         res.redirect("header/cardapio", {style: "style.css"})
-    })
-
-    
+    })   
 })
+
+router.get("/pizza-doce", (req, res)=>{
+    Pizza.find().lean().
+})
+
 
 router.get("/unidades", (req, res)=>{
     res.render("header/unidades", {style: "style.css"})
@@ -36,7 +39,7 @@ router.post("/novo-pedido", (req, res)=>{
         errors.push({text: "Um dos campos está vazio"})
     };
 
-    if(req.body.descricao.length < 100){
+    if(req.body.descricao.length < 20){
         errors.push({text: "Descrição inválida, o campo está vazio ou possui poucas palavras"})
     };
 

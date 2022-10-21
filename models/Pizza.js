@@ -14,7 +14,15 @@ const Pizza = new Schema({
         type: String,
         require: true,
     },
-    preco:{
+    preco1:{
+        type: String,
+        require: true,
+    },
+    preco2:{
+        type: String,
+        require: true,
+    },
+    preco3:{
         type: String,
         require: true,
     }

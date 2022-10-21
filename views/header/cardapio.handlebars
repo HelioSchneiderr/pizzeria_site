@@ -1,20 +1,12 @@
 <link rel="stylesheet" href="/css/cardapio.css">
 
-{{#each pizza}}
-    <div class="pizza-cardapio">
-    <h1>{{sabor}}</h1>
-    <p>{{descricao}}</p>
-</div>
-{{else}}
-
-{{/each}}
-
+<div class="background_image_cardapio">
 <nav>
     <div class="cardapio-btn">
         <button>Pizzas Salgadas</button>
     </div>
     <div class="cardapio-btn">
-        <button>Pizzas Doces</button>
+        <a href=""><button>Pizzas Doces</button></a>
     </div>
     <div class="cardapio-btn">
         <button>Bebidas</button>
@@ -24,7 +16,19 @@
     </div>
 </nav>
 
+{{#each pizza}}
 <div class="pizza-cardapio">
-    <h1>Pizza</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem fugit accusamus, eos reprehenderit molestias in? Tenetur ipsum repellat, excepturi iste quos amet voluptatum architecto quis a veniam. Quidem, laudantium officia.</p>
+    <h1>{{sabor}}</h1>
+    <h3 class="descricao_cardapio">{{descricao}}</h3>
+    <br>
+    <div class="prices">
+    <p>Pequena - {{preco1}}</p>
+    <p>Média - {{preco2}}</p>
+    <p>Grande - {{preco3}}</p>
+    </div>
+</div>
+
+{{else}}
+
+{{/each}}
 </div>

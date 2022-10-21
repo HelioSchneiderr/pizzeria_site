@@ -16,11 +16,19 @@ router.post("/nova-pizza", (req,res)=>{
         errors.push({text: "Sabor inválido, o campo está vazio"})
     };
 
-    if(req.body.descricao.length < 100){
+    if(req.body.descricao.length < 20){
         errors.push({text: "Descrição inválida, o campo está vazio ou possui poucas palavras"})
     };
 
-    if(req.body.preco.length <= 2){
+    if(req.body.preco1.length <= 2){
+        errors.push({text: "Preço inválido"})
+    };
+
+    if(req.body.preco2.length <= 2){
+        errors.push({text: "Preço inválido"})
+    };
+
+    if(req.body.preco3.length <= 2){
         errors.push({text: "Preço inválido"})
     };
 
@@ -34,11 +42,13 @@ router.post("/nova-pizza", (req,res)=>{
             tipo: req.body.tipo,
             sabor: req.body.sabor,
             descricao: req.body.descricao,
-            preco: req.body.preco
+            preco1: req.body.preco1,
+            preco2: req.body.preco2,
+            preco3: req.body.preco3
         }
 
         new Pizza(novaPizza).save().then(()=>{
-            req.flash("success_msg", "Produto Adicionado com successo")
+            req.flash("success_msg", "Produto adicionado com successo")
             res.redirect("../header/cardapio")
         }).catch((err)=>{
             req.flash("error_msg", `O produto não foi adicionado devido ao erro: ${err}`)
