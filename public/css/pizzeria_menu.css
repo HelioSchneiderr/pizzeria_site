@@ -9,11 +9,11 @@ nav{
     margin: 40px;
 }
 
-.cardapio-btn button{
+.pizzeria_menu_btn button{
     margin-left: 30px;
 }
 
-.cardapio-btn button {
+.pizzeria_menu_btn button {
     transition-duration: 0.4s;
     padding: 10px;
     width: 12em;
@@ -23,13 +23,13 @@ nav{
     font-weight: bold;
   }
   
-.cardapio-btn button:hover {
+.pizzeria_menu_btn button:hover {
     background-color: #6B0005; /* Green */
     color: white;
 }
 
 
-.pizza-cardapio{
+.pizzeria_menu{
     background-color: #E19F0C;
     width: 80%;
     padding: 10px 14px;
@@ -38,7 +38,7 @@ nav{
     margin-bottom: 50px;
 }
 
-.pizza-cardapio h3{
+.pizzeria_menu h3{
     color: #6B0005;
     width: 500px;
 }

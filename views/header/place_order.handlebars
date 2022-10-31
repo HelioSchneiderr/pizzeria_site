@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="/css/faca-seu-pedido.css">
 
 
-<form action="/header/novo-pedido" method="POST">
+<form action="/header/new_request" method="POST">
     <div class="container">
         <h1>FAÇA SEU PEDIDO</h1>
         <div class="form-control">
             <label for="">Tipo: </label>
-            <select name="tipo" id="tipo">
+            <select name="size" id="size">
                 <option value="grande">Grande</option>
                 <option value="doce">Média</option>
                 <option value="pequena">Pequena</option>
@@ -14,19 +14,19 @@
         </div>
         <div class="form-control">
             <label for="">Sabor: </label>
-            <input name="sabor" id="sabor" type="text">
+            <input name="flavor" id="flavor" type="text">
         </div>
         <div class="form-control">
             <label for="">Bebidas: </label>
-            <input name="bebidas" id="bebidas" type="text">
+            <input name="drink" id="drink" type="text">
         </div>
         <div class="form-control">
             <label for="">Endereço: </label>
-            <input name="endereco" id="endereco" type="text">
+            <input name="address" id="address" type="text">
         </div>
         <div class="form-control">
             <label for="">Telefone: </label>
-            <input name="telefone" id="telefone" type="text">
+            <input name="telephone" id="telephone" type="number">
         </div>
         <div>
             <a href="#"><button type="submit" class="btn-faca-seu-pedido">Fazer Pedido</button></a>

@@ -5,13 +5,13 @@
 {{else}}
 
 {{/each}}
-<form action="/admin/nova-pizza" method="POST">
+<form action="/admin/new_several" method="POST">
     <div class="container">
         <h1>Adicionar Pizza</h1>
         
         <div class="form-control">
             <label for="">Tipo: </label>
-            <select name="tipo" id="tipo">
+            <select name="type" id="type">
                 <option value="salgada">Salgada</option>
                 <option value="doce">Doce</option>
             </select>
@@ -19,24 +19,24 @@
         
         <div class="form-control">
             <label for="">Sabor: </label>
-            <input name="sabor" id="sabor" type="text-area">
+            <input name="flavor" id="flavor" type="text-area">
         </div>
         
         <div class="form-control">
             <label for="">Descrição: </label>
-            <textarea name="descricao" id="descricao" cols="47" rows="10"></textarea>
+            <textarea name="description" id="description" cols="47" rows="10"></textarea>
         </div>
         <div class="form-control">
             <label for="">Preço da Pequena: </label>
-            <input name="preco1" id="preco1" value="R$ -" type="text">
+            <input name="price_small" id="price_small" value="R$ -" type="text">
         </div>
         <div class="form-control">
             <label for="">Preço da Média: </label>
-            <input name="preco2" id="preco2" value="R$ -" type="text">
+            <input name="price_average" id="price_average" value="R$ -" type="text">
         </div>
         <div class="form-control">
             <label for="">Preço da Grande: </label>
-            <input name="preco3" id="preco3" value="R$ -" type="text">
+            <input name="price_big" id="price_big" value="R$ -" type="text">
         </div>
         <div>
             <a href="#"><button type="submit" class="btn-faca-seu-pedido">Adcionar ao Cardápio</button></a>

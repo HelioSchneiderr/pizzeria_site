@@ -1,67 +1,66 @@
 const express = require("express")
 const router = express.Router()
 const mongoose = require("mongoose")
-require("../models/Pedidos")
-const Pedido = mongoose.model("pedidos")
+require("../models/Request")
+const Request = mongoose.model("request")
 require("../models/Pizza")
 const Pizza = mongoose.model("pizza")
 
 
 
 
-router.get("/faca-seu-pedido", (req, res)=>{
-    res.render("header/faca-seu-pedido", {style: "style.css"})
+router.get("/place_order", (req, res)=>{
+    res.render("header/place_order", {style: "style.css"})
 })
 
-router.get("/cardapio", (req, res)=>{
-    Pizza.find().lean().then((pizza)=>{
-        res.render("header/cardapio", {pizza: pizza})
+router.get("/pizzeria_menu", (req, res)=>{
+    Pizza.find({type: "salgada"}).lean().then((pizza)=>{
+        res.render("header/pizzeria_menu", {pizza: pizza})
     }).catch((err)=>{
         res.flash("error_message", "Houve um erro ao listar os produtos")
-        res.redirect("header/cardapio", {style: "style.css"})
+        res.redirect("header/pizzeria_menu", {style: "style.css"})
     })   
 })
 
-router.get("/pizza-doce", (req, res)=>{
-    Pizza.find().lean().
+router.get("/sweet_pizza", (req, res)=>{
+
+
+    Pizza.find({type: "doce"}).lean().then((pizza)=>{
+         res.render("header/pizzeria_menu", {pizza: pizza})  
+    }).catch((err)=>{
+        res.flash("error_message", "Houve um erro ao listar os produtos")
+        res.redirect("header/pizzeria_menu", {style: "style.css"})
+    })   
 })
 
 
-router.get("/unidades", (req, res)=>{
-    res.render("header/unidades", {style: "style.css"})
+router.get("/unit_places", (req, res)=>{
+    res.render("header/unit_places", {style: "style.css"})
 })
 
-router.post("/novo-pedido", (req, res)=>{
+router.post("/new_request", (req, res)=>{
 
     let errors = [];
 
-    if(!req.body.sabor || !req.body.bebidas || !req.body.endereco || !req.body.telefone){
+    if(!req.body.flavor || !req.body.drink || !req.body.address || !req.body.telephone){
         errors.push({text: "Um dos campos está vazio"})
     };
 
-    if(req.body.descricao.length < 20){
-        errors.push({text: "Descrição inválida, o campo está vazio ou possui poucas palavras"})
-    };
-
-    if(req.body.preco.length <= 2){
-        errors.push({text: "Preço inválido"})
-    };
-
     if(errors.length > 0){
-        res.render("admin/adicionar-cardapio", {errors:errors})
+        res.render("admin/add_menu", {errors:errors})
     }
 
     else{
     
-    const novoPedido ={
-        tamanho: req.body.tamanho,
-        sabor: req.body.sabor,
-        bebidas: req.body.bebidas,
-        endereco: req.body.endereco,
-        telefone: req.body.telefone
+    const newRequest ={
+        size: req.body.size,
+        flavor: req.body.flavor,
+        drink: req.body.drink,
+        address: req.body.address,
+        telephone: req.body.telephone
     }
 
-    new Pedido(novoPedido).save().then(()=>{
+    new Request(newRequest).save().then(()=>{
         console.log("salvo com sucessso")
     }).catch((err) =>{
         console.log("Erro ao salvar o pedido" + err)

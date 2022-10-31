@@ -2,27 +2,27 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const Pizza = new Schema({
-    tipo:{
+    type:{
         type: String,
         require: true
     },
-    sabor:{
+    flavor:{
         type: String,
         require: true
     },
-    descricao:{
+    description:{
         type: String,
         require: true,
     },
-    preco1:{
+    price_small:{
         type: String,
         require: true,
     },
-    preco2:{
+    price_average:{
         type: String,
         require: true,
     },
-    preco3:{
+    price_big:{
         type: String,
         require: true,
     }

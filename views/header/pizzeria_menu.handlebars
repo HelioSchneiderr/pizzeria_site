@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/css/pizzeria_menu.css">
+
+<div class="background_image_pizzeria_menu">
+<nav>
+    <div class="pizzeria_menu_btn">
+        <a href="/header/pizzeria_menu"><button>Pizzas Salgadas</button></a>
+    </div>
+    <div class="pizzeria_menu_btn">
+        <a href="/header/sweet_pizza"><button>Pizzas Doces</button></a>
+    </div>
+    <div class="pizzeria_menu_btn">
+        <button>Bebidas</button>
+    </div>
+    <div class="pizzeria_menu_btn">
+        <button>Diversos</button>
+    </div>
+</nav>
+
+{{#each pizza}}
+<div class="pizzeria_menu">
+    <h1>{{flavor}}</h1>
+    <h3 class="description_pizzeria_menu">{{description}}</h3>
+    <br>
+    <div class="prices">
+    <p>Pequena - {{price_small}}</p>
+    <p>Média - {{price_average}}</p>
+    <p>Grande - {{price_big}}</p>
+    </div>
+</div>
+
+{{else}}
+
+{{/each}}
+</div>

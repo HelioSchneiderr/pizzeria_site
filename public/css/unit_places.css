@@ -1,38 +1,38 @@
-.section-unidades{
+.section_unit_places{
     text-align: center;
     margin: auto;
-    background-image: url("../img/unidades/pizza-prime-bg-title-bar.jpg");
+    background-image: url("../img/unit_places/pizza-prime-bg-title-bar.jpg");
     height: 300px;
     padding-top: 135px;
     box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.77);
 
 }
 
-.section-unidades h1{
+.section_unit_places h1{
     color: #dab225;
     font-size: 3em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
-.section-unidades span{
+.section_unit_places span{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     
 }
 
-.unidades{
+.unit_places{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.unidade-image{
+.unit_places_image{
     padding: 20px;
 }
 
-.unidade-image p{
+.unit_places_image p{
     background-color: #cc2c2c;
     padding: 20px;
     font-size: 1.2em;
@@ -43,7 +43,7 @@
     text-align: center;
 }
 
-.unidade-image img{
+.unit_places_image img{
     width: 313px;
     height: 249px;
 }

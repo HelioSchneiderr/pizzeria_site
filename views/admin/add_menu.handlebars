@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/css/faca-seu-pedido.css">
+
+{{#each errors}}
+    <div class="alert alert_error">{{text}}</div>
+{{else}}
+
+{{/each}}
+<form action="/admin/new_pizza" method="POST">
+    <div class="container">
+        <h1>Adicionar Pizza</h1>
+        
+        <div class="form-control">
+            <label for="">Tipo: </label>
+            <select name="type" id="type">
+                <option value="salgada">Salgada</option>
+                <option value="doce">Doce</option>
+            </select>
+        </div>
+        
+        <div class="form-control">
+            <label for="">Sabor: </label>
+            <input name="flavor" id="flavor" type="text-area">
+        </div>
+        
+        <div class="form-control">
+            <label for="">Descrição: </label>
+            <textarea name="description" id="description" cols="47" rows="10"></textarea>
+        </div>
+        <div class="form-control">
+            <label for="">Preço da Pequena: </label>
+            <input name="price_small" id="price_small" value="R$ -" type="text">
+        </div>
+        <div class="form-control">
+            <label for="">Preço da Média: </label>
+            <input name="price_average" id="price_average" value="R$ -" type="text">
+        </div>
+        <div class="form-control">
+            <label for="">Preço da Grande: </label>
+            <input name="price_big" id="price_big" value="R$ -" type="text">
+        </div>
+        <div>
+            <a href="#"><button type="submit" class="btn-faca-seu-pedido">Adcionar ao Cardápio</button></a>
+        </div>
+    </div>
+
+
+
+</form>
