@@ -33,6 +33,16 @@ router.get("/sweet_pizza", (req, res)=>{
     })   
 })
 
+router.get("/drink", (req,res)=>{
+    
+    Several.find({type: "bebida"}).lean().then((pizza)=>{
+        res.render("header/pizzeria_menu", {pizza: pizza})
+    }).catch((err) =>{
+        res.flash("error_message", "Houver um erro ao listar as bebidas")
+        res.redirect("header/pizzaria_menu", {style: "style.css"})
+    })
+})
+
 
 router.get("/unit_places", (req, res)=>{
     res.render("header/unit_places", {style: "style.css"})
