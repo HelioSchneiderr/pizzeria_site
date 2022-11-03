@@ -7,6 +7,16 @@ const Pizza = mongoose.model("pizza")
 const Several = mongoose.model("several")
 
 
+
+
+
+
+router.get("/admin_page", (req,res)=>{
+    res.render("admin/admin_page", {style: "style.css"})
+})
+
+//Adding pizzas 
+
 router.get("/add_menu", (req,res)=>{
     res.render("admin/add_menu", {style: "style.css"})
 });
@@ -62,6 +72,8 @@ router.post("/new_pizza", (req,res)=>{
 
 })
 
+
+//Adding drinks and miscellaneous
 
 router.get("/add_several", (req, res) =>{
     res.render("admin/add_menu_several", {style: "style.css"})

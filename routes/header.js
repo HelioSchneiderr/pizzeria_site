@@ -2,9 +2,11 @@ const express = require("express")
 const router = express.Router()
 const mongoose = require("mongoose")
 require("../models/Request")
-const Request = mongoose.model("request")
 require("../models/Pizza")
+require("../models/Several")
 const Pizza = mongoose.model("pizza")
+const Several = mongoose.model("several")
+const Request = mongoose.model("request")
 
 
 
@@ -12,6 +14,8 @@ const Pizza = mongoose.model("pizza")
 router.get("/place_order", (req, res)=>{
     res.render("header/place_order", {style: "style.css"})
 })
+
+
 
 router.get("/pizzeria_menu", (req, res)=>{
     Pizza.find({type: "salgada"}).lean().then((pizza)=>{
@@ -22,6 +26,9 @@ router.get("/pizzeria_menu", (req, res)=>{
     })   
 })
 
+
+
+//filter for sweet pizza in menu
 router.get("/sweet_pizza", (req, res)=>{
 
 
@@ -33,11 +40,27 @@ router.get("/sweet_pizza", (req, res)=>{
     })   
 })
 
-router.get("/drink", (req,res)=>{
+
+//filter for drinks in menu
+router.get("/drink_menu", (req,res)=>{
     
-    Several.find({type: "bebida"}).lean().then((pizza)=>{
-        res.render("header/pizzeria_menu", {pizza: pizza})
+    Several.find({type: "bebida"}).lean().then((several)=>{
+        res.render("header/pizzeria_menu", {several: several})
     }).catch((err) =>{
+        console.log(err)
+        res.flash("error_message", "Houver um erro ao listar as bebidas")
+        res.redirect("header/pizzaria_menu", {style: "style.css"})
+    })
+})
+
+
+//filter for several in menu
+router.get("/several_menu", (req,res)=>{
+    
+    Several.find({type: "diverso"}).lean().then((several)=>{
+        res.render("header/pizzeria_menu", {several: several})
+    }).catch((err) =>{
+        console.log(err)
         res.flash("error_message", "Houver um erro ao listar as bebidas")
         res.redirect("header/pizzaria_menu", {style: "style.css"})
     })
@@ -48,6 +71,10 @@ router.get("/unit_places", (req, res)=>{
     res.render("header/unit_places", {style: "style.css"})
 })
 
+
+
+
+//Requests for the establishment to make
 router.post("/new_request", (req, res)=>{
 
     let errors = [];

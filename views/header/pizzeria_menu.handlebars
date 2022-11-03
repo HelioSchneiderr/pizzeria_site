@@ -9,10 +9,10 @@
         <a href="/header/sweet_pizza"><button>Pizzas Doces</button></a>
     </div>
     <div class="pizzeria_menu_btn">
-        <button>Bebidas</button>
+        <a href="/header/drink_menu"><button>Bebidas</button></a>
     </div>
     <div class="pizzeria_menu_btn">
-        <button>Diversos</button>
+        <a href="/header/several_menu"><button>Diversos</button></a>
     </div>
 </nav>
 
@@ -25,6 +25,21 @@
     <p>Pequena - {{price_small}}</p>
     <p>Média - {{price_average}}</p>
     <p>Grande - {{price_big}}</p>
+    </div>
+</div>
+
+{{else}}
+
+{{/each}}
+
+{{#each several}}
+
+<div class="pizzeria_menu">
+    <h1>{{name}}</h1>
+    <h3 class="description_pizzeria_menu">{{description}}</h3>
+    <br>
+    <div class="prices">
+    <p>Pequena - {{price}}</p>
     </div>
 </div>
 
