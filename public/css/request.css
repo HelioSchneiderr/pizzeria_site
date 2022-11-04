@@ -13,6 +13,12 @@ body{
 }
 
 .request_menu h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #6B0005;
     width: 500px;
+}
+
+.request_menu p{
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }

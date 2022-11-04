@@ -4,6 +4,7 @@ const bodyParser = require("body-parser")
 const handlebars = require("express-handlebars")
 const header = require("./routes/header")
 const admin = require("./routes/admin")
+const footer = require("./routes/footer")
 const mongoose = require("mongoose")
 const session = require("express-session")
 const flash = require("connect-flash")
@@ -59,7 +60,7 @@ const path = require("path")
     })
 
     
-
+    app.use("/footer", footer)
     app.use("/admin", admin)
     app.use("/header", header)
 

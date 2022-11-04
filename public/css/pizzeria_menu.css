@@ -5,8 +5,13 @@ body{
 
 nav{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    margin: 40px;
+    padding: 40px;
+}
+
+nav button{
+    margin-top: 10px;
 }
 
 .pizzeria_menu_btn button{
@@ -31,7 +36,7 @@ nav{
 
 .pizzeria_menu{
     background-color: #E19F0C;
-    width: 80%;
+    width: 75%;
     padding: 10px 14px;
     border-radius: 20px;
     margin-left: 65px;
@@ -40,7 +45,7 @@ nav{
 
 .pizzeria_menu h3{
     color: #6B0005;
-    width: 500px;
+    width: 74%;
 }
 
 .prices p{
@@ -64,4 +69,18 @@ nav{
     color: rgb(28, 114, 50);
 }
 
+a{
+    text-decoration: none;
+}
+
+@media  screen and (max-width:600px){
+    .prices p{
+        font-size: 10px;
+    }
+    
+    nav{
+        margin: auto;
+        text-align: center;
+    }
+}
 

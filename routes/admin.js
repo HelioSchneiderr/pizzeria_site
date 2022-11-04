@@ -124,9 +124,6 @@ router.post("/new_several", (req,res)=>{
 
 //Requests
 
-let x = 0
-let z = x++
-
 router.get("/request", (req, res)=>{
 
     Request.find().sort({data: "desc"}).lean().then((request)=>{
@@ -136,6 +133,7 @@ router.get("/request", (req, res)=>{
         res.redirect("index")
     })
 })
+
 
 
 

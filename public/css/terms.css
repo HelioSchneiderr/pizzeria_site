@@ -1,0 +1,39 @@
+.section_terms{
+    text-align: center;
+    margin: auto;
+    background-image: url("../img/unit_places/pizza-prime-bg-title-bar.jpg");
+    height: 300px;
+    padding-top: 135px;
+    box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.77);
+
+}
+
+.section_terms h1{
+    color: #dab225;
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.section_terms span{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+
+.text_terms{
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+}
+
+.text_terms h3{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text_terms p{
+    font-family: Arial, Helvetica, sans-serif;
+}
