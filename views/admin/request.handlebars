@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/request.css">
+
+{{#each request}}
+
+<div class="request_menu">
+<h1>Pedido: {{request.length}}</h1>
+<p>Tamanho: {{size}}</p>
+<p>Sabor: {{flavor}}</p>
+<p>Bebida: {{drink}}</p>
+<p>Endereço: {{address}}</p>
+<p>Telefone: {{telephone}}</p>
+<p>Hora do Pedido: {{date}}</p>
+</div>
+
+{{/each}}

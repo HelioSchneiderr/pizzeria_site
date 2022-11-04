@@ -3,8 +3,10 @@ const router = express.Router()
 const mongoose = require("mongoose")
 require("../models/Pizza")
 require("../models/Several")
+require("../models/Request")
 const Pizza = mongoose.model("pizza")
 const Several = mongoose.model("several")
+const Request = mongoose.model("request")
 
 
 
@@ -120,6 +122,20 @@ router.post("/new_several", (req,res)=>{
 
 })
 
+//Requests
+
+let x = 0
+let z = x++
+
+router.get("/request", (req, res)=>{
+
+    Request.find().sort({data: "desc"}).lean().then((request)=>{
+        res.render("admin/request", {request:request})
+    }).catch((err)=>{
+        req.flash("error_msg", "Erro ao listar os pedidos")
+        res.redirect("index")
+    })
+})
 
 
 

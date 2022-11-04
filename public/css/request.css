@@ -1,0 +1,18 @@
+body{
+    background-image: url("https://i.pinimg.com/originals/90/43/a7/9043a730ef9d90e2b2e6c92265939457.jpg");
+}
+
+.request_menu{
+    background-color: #E19F0C;
+    width: 80%;
+    padding: 10px 14px;
+    border-radius: 20px;
+    margin-left: 65px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.request_menu h1{
+    color: #6B0005;
+    width: 500px;
+}
