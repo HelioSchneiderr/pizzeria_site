@@ -3,7 +3,7 @@
 {{#each request}}
 
 <div class="request_menu">
-    <h1>Pedido: {{_id}}</h1>
+    <h1>Pedido: {{request.length}}</h1>
     <p>Tamanho: {{size}}</p>
     <p>Sabor: {{flavor}}</p>
     <p>Bebida: {{drink}}</p>
@@ -11,6 +11,11 @@
     <p>Telefone: {{telephone}}</p>
     <p>Hora do Pedido: {{date}}</p>
     <p>Tipo de Pagamento: {{payment}}</p>
+    <a href="/admin/request/remove/{{_id}}"><button class="request_red_button" >Deletar</button></a>
 </div>
-
+{{else}}
+    <div class="empty_request">
+        <h1>Nenhum pedido encontrado</h1>
+    </div>
+    
 {{/each}}

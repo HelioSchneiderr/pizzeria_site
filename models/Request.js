@@ -34,6 +34,10 @@ const Request = new Schema({
     date:{
         type: Date,
         default: Date.now()
+    },
+    id:{
+        type: String,
+        require: true
     }
 })
 

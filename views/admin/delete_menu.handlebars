@@ -3,16 +3,16 @@
 <div class="background_image_pizzeria_menu">
 <nav>
     <div class="pizzeria_menu_btn">
-        <a href="/header/pizzeria_menu"><button>Pizzas Salgadas</button></a>
+        <a href="/admin/pizzeria_menu"><button>Pizzas Salgadas</button></a>
     </div>
     <div class="pizzeria_menu_btn">
-        <a href="/header/sweet_pizza"><button>Pizzas Doces</button></a>
+        <a href="/admin/sweet_pizza"><button>Pizzas Doces</button></a>
     </div>
     <div class="pizzeria_menu_btn">
-        <a href="/header/drink_menu"><button>Bebidas</button></a>
+        <a href="/admin/drink_menu"><button>Bebidas</button></a>
     </div>
     <div class="pizzeria_menu_btn">
-        <a href="/header/several_menu"><button>Diversos</button></a>
+        <a href="/admin/several_menu"><button>Diversos</button></a>
     </div>
 </nav>
 
@@ -26,7 +26,7 @@
     <p>Média - {{price_average}}</p>
     <p>Grande - {{price_big}}</p>
     </div>
-    
+    <a href="/admin/menu/remove/{{_id}}"><button class="request_red_button" >Deletar</button></a>
     
 </div>
 
@@ -43,6 +43,7 @@
     <div class="prices">
     <p>{{price}}</p>
     </div>
+    <a href="/admin/several/remove/{{_id}}"><button class="request_red_button" >Deletar</button></a>
 </div>
 
 {{else}}

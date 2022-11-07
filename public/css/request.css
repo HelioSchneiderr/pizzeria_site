@@ -20,5 +20,34 @@ body{
 
 .request_menu p{
     padding-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.empty_request h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+    margin-bottom: 600px;
+    margin-top: 200px;
+}
+
+.request_red_button{
+    
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    min-width: 100px;
+    border: 0px;
+    -webkit-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
+}
+
+.request_red_button{
+    background: #e74c3c;
+    color: #ffffff;
 }

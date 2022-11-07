@@ -69,6 +69,28 @@ nav button{
     color: rgb(28, 114, 50);
 }
 
+.request_red_button{
+    
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    min-width: 100px;
+    border: 0px;
+    -webkit-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
+}
+
+.request_red_button{
+    background: #e74c3c;
+    color: #ffffff;
+}
+
+
 a{
     text-decoration: none;
 }

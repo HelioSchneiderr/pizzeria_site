@@ -77,6 +77,8 @@ router.get("/unit_places", (req, res)=>{
 //Requests for the establishment to make
 router.post("/new_request", (req, res)=>{
 
+    let pizzaLength = Pizza.length
+
     let errors = [];
 
     if(!req.body.flavor || !req.body.drink || !req.body.address || !req.body.telephone){
@@ -94,7 +96,9 @@ router.post("/new_request", (req, res)=>{
         flavor: req.body.flavor,
         drink: req.body.drink,
         address: req.body.address,
-        telephone: req.body.telephone
+        telephone: req.body.telephone,
+        payment: req.body.payment,
+        id: req.pizzaLength 
     }
 
     new Request(newRequest).save().then(()=>{
