@@ -1,0 +1,76 @@
+.section_work{
+    text-align: center;
+    margin: auto;
+    background-image: url("../img/unit_places/pizza-prime-bg-title-bar.jpg");
+    height: 300px;
+    padding-top: 135px;
+    box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.77);
+
+}
+
+.section_work h1{
+    color: #dab225;
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.section_work span{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+
+.red_center{
+    width: 35%;
+    background-color: #821a1d;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    padding: 30px;
+    
+}
+
+.red_center_h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 1.5em;
+}
+
+.red_center_yellow{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffcb04;
+    font-size: 1.5em;
+}
+
+.question_work{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.text_work{
+    display: flex;
+    padding: 100px;
+    justify-content:space-between;
+    width: 71%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+}
+
+.email_text{
+    text-align: center;
+    padding: 10px;
+    margin-left: 50px;
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    border-radius: 10px;
+    height: 40px;
+    color: rgb(82, 77, 77);
+    box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.75);
+
+}
