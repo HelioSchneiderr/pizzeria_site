@@ -68,3 +68,7 @@ a{
     border-color: rgb(49, 253, 22);
     color: rgb(28, 114, 50);
 }
+
+a{
+    text-decoration: none;
+}

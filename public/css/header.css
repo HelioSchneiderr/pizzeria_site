@@ -4,6 +4,10 @@ header{
     height: 168px;
 }
 
+a{
+    text-decoration: none;
+}
+
 .logo_main{
     margin-top: 20px;
 }

@@ -4,6 +4,10 @@
     padding: 0px;
 }
 
+a{
+    text-decoration: none;
+}
+
 footer{
     background-color: rgb(107, 0, 5);
     display: flex;

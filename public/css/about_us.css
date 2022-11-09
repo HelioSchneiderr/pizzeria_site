@@ -1,0 +1,79 @@
+.section_about{
+    text-align: center;
+    margin: auto;
+    background-image: url("../img/unit_places/pizza-prime-bg-title-bar.jpg");
+    height: 300px;
+    padding-top: 135px;
+    box-shadow: 1px 3px 12px 0px rgba(0,0,0,0.77);
+
+}
+
+.section_about h1{
+    color: #dab225;
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.section_about span{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+
+.section_phrase{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 4em auto;
+}
+
+.text_about{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+    padding: 15px;
+    box-shadow: 0px 0px 19px -6px rgba(0,0,0,0.75);
+}
+
+.motivational_phrase{
+    width: 50%;
+    margin-left: 50px;
+}
+
+.gray_phrase{
+    box-shadow: 0px 0px 19px -6px rgba(0,0,0,0.75);
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #821a1d
+}
+
+.red_phrase{
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background-color: #821a1d;
+    color: white;
+}
+
+@media  screen and (max-width:1174px){
+    .motivational_phrase{
+        margin-top: 50px;
+    }
+
+    .text_about{
+        width: 400px;
+        height: 500px;
+        
+    }
+}
+
+@media  screen and (max-width:860px){
+    .motivational_phrase{
+        margin-left: 0px;
+    }
+}
