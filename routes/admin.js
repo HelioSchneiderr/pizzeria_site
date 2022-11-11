@@ -89,7 +89,7 @@ router.post("/new_several", (req,res)=>{
         errors.push({text: "Sabor inválido, o campo está vazio"})
     };
 
-    if(req.body.description.length < 20){
+    if(req.body.description.length < 2){
         errors.push({text: "Descrição inválida, o campo está vazio ou possui poucas palavras"})
     };
 

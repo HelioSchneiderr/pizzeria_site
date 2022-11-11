@@ -11,8 +11,15 @@ const Request = mongoose.model("request")
 
 
 
+
+//Request for user
 router.get("/place_order", (req, res)=>{
-    res.render("header/place_order", {style: "style.css"})
+    Pizza.find().lean().then((pizza)=>{
+        res.render("header/place_order", {pizza: pizza})
+    }).catch((err)=>{
+        res.flash("error_message", "Houve um erro ao listar os produtos" + err)
+        res.redirect("header/pizzeria_menu", {style: "style.css"})
+    })   
 })
 
 
@@ -77,11 +84,10 @@ router.get("/unit_places", (req, res)=>{
 //Requests for the establishment to make
 router.post("/new_request", (req, res)=>{
 
-    let pizzaLength = Pizza.length
 
     let errors = [];
 
-    if(!req.body.flavor || !req.body.drink || !req.body.address || !req.body.telephone){
+    if(!req.body.flavor1 || !req.body.drink || !req.body.address || !req.body.telephone){
         errors.push({text: "Um dos campos está vazio"})
     };
 
@@ -93,7 +99,9 @@ router.post("/new_request", (req, res)=>{
     
     const newRequest ={
         size: req.body.size,
-        flavor: req.body.flavor,
+        flavor1: req.body.flavor1,
+        flavor2: req.body.flavor2,
+        flavor3: req.body.flavor3,
         drink: req.body.drink,
         address: req.body.address,
         telephone: req.body.telephone,
@@ -102,7 +110,8 @@ router.post("/new_request", (req, res)=>{
     }
 
     new Request(newRequest).save().then(()=>{
-        console.log("salvo com sucessso")
+        req.flash("success_msg", "Pedido feito com sucesso")
+        res.redirect("../header/pizzeria_menu")
     }).catch((err) =>{
         console.log("Erro ao salvar o pedido" + err)
     })

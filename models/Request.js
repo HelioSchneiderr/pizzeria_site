@@ -9,18 +9,31 @@ const Request = new Schema({
         type: String,
         require: true
     },
-    flavor:{
+    flavor1:{
         type: String,
         require: true
     },
+    
+    flavor2:{
+        type: String,
+        require: true
+    },
+
+    flavor3:{
+        type: String,
+        require: true
+    },
+
     drink:{
         type: String,
         require: true
     },
+
     address:{
         type: String,
         require: true
     },
+
     telephone:{
         type: Number,
         require: true

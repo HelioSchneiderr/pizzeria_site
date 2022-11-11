@@ -1,5 +1,6 @@
 body{
-    background-image: url("https://i.pinimg.com/originals/90/43/a7/9043a730ef9d90e2b2e6c92265939457.jpg");
+    background: rgb(78,2,4);
+    background: linear-gradient(90deg, rgba(78,2,4,1) 0%, rgba(130,26,29,1) 6%);
 }
 
 

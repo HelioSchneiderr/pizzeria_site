@@ -1,47 +1,78 @@
-<link rel="stylesheet" href="/css/faca-seu-pedido.css">
-
-
-<form action="/header/new_request" method="POST">
-    <div class="container">
-        <h1>FAÇA SEU PEDIDO</h1>
-        <div class="form-control">
-            <label for="">Tipo: </label>
-            <select name="size" id="size">
-                <option value="grande">Grande</option>
-                <option value="doce">Média</option>
-                <option value="pequena">Pequena</option>
-            </select>
-        </div>
-        <div class="form-control">
-            <label for="">Sabor: </label>
-            <input name="flavor" id="flavor" type="text" placeholder="maximo de três sabores">
-        </div>
-        <div class="form-control">
-            <label for="">Bebidas: </label>
-            <input name="drink" id="drink" type="text">
-        </div>
-        <div class="form-control">
-            <label for="">Endereço: </label>
-            <input name="address" id="address" type="text">
-        </div>
-        <div class="form-control">
-            <label for="">Telefone: </label>
-            <input name="telephone" id="telephone" type="number">
-        </div>
-        <div class="form-control">
-            <label for="">Tipo de Pagamento: </label>
-            <select name="payment" id="payment">
-                <option value="Dinheiro">Dinheiro</option>
-                <option value="Visa">Visa</option>
-                <option value="MasterCard">Master Card</option>
-                <option value="Elo">Elo</option>
-            </select>
-        </div>
-        <div>
-            <a href="#"><button type="submit" class="btn-faca-seu-pedido">Fazer Pedido</button></a>
-        </div>
-    </div>
+<link rel="stylesheet" href="/css/place_order.css">
 
 
 
-</form>
+
+    <form action="/header/new_request" method="POST">
+        <div class="container">
+            <h1>FAÇA SEU PEDIDO</h1>
+            <div class="form-control">
+                <label for="">Tipo: </label>
+                <select name="size" id="size">
+                    <option value="grande">Grande</option>
+                    <option value="media">Média</option>
+                    <option value="pequena">Pequena</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="pizza">Sabor 1: </label>
+                <select name="flavor1" id="flavor1">
+                {{#each pizza}}
+                    <option value="{{flavor}}">{{flavor}}</option>
+                {{else}}
+                    <option value="">Nenhum sabor registrado</option>
+                {{/each}}
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="pizza">Sabor 2: </label>
+                <select name="flavor2" id="flavor2">
+                {{#each pizza}}
+                    <option value="{{flavor}}">{{flavor}}</option>
+                {{else}}
+                    <option value="">Nenhum sabor registrado</option>
+                {{/each}}
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="pizza">Sabor 3: </label>
+                <select name="flavor3" id="flavor3">
+                {{#each pizza}}
+                    <option value="{{flavor}}">{{flavor}}</option>
+                {{else}}
+                    <option value="">Nenhum sabor registrado</option>
+                {{/each}}
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label for="">Bebidas: </label>
+                <input name="drink" id="drink" type="text">
+            </div>
+            <div class="form-control">
+                <label for="">Endereço: </label>
+                <input name="address" id="address" type="text">
+            </div>
+            <div class="form-control">
+                <label for="">Telefone: </label>
+                <input name="telephone" id="telephone" type="number">
+            </div>
+            <div class="form-control">
+                <label for="">Tipo de Pagamento: </label>
+                <select name="payment" id="payment">
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Visa">Visa</option>
+                    <option value="MasterCard">Master Card</option>
+                    <option value="Elo">Elo</option>
+                </select>
+            </div>
+            <div>
+                <a href="#"><button type="submit" class="btn-faca-seu-pedido">Fazer Pedido</button></a>
+            </div>
+        </div>
+
+
+
+    </form>
+
+
