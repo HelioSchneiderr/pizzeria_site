@@ -92,7 +92,7 @@ router.post("/new_request", (req, res)=>{
     };
 
     if(errors.length > 0){
-        res.render("admin/add_menu", {errors:errors})
+        res.render("header/place_order", {errors:errors})
     }
 
     else{

@@ -13,7 +13,7 @@ const Request = new Schema({
         type: String,
         require: true
     },
-    
+
     flavor2:{
         type: String,
         require: true

@@ -1,7 +1,11 @@
 <link rel="stylesheet" href="/css/place_order.css">
 
 
+{{#each errors}}
+    <div class="alert alert_error">{{text}}</div>
+{{else}}
 
+{{/each}}
 
     <form action="/header/new_request" method="POST">
         <div class="container">

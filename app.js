@@ -64,7 +64,7 @@ const path = require("path")
     app.use("/admin", admin)
     app.use("/header", header)
 
-const PORT = 9676
+const PORT = process.env.PORT || 9676
 app.listen(PORT, ()=>{
     console.log("Server Open")
 })
